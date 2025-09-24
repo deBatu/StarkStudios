@@ -1,5 +1,5 @@
-﻿{
+{
   "redirects": [
-    { "source": "/", "destination": "/agency.html", "permanent": false }
+    { "source": "/", "destination": "/src/agency.html" }
   ]
 }
