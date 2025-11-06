@@ -231,24 +231,29 @@ main, header, footer {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 14px 26px;
+    padding: 16px 32px;
     border-radius: 999px;
     border: 1px solid transparent;
     font-weight: 600;
-    font-size: 0.96rem;
+    font-size: 1.02rem;
     cursor: pointer;
-    transition: transform 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, color 0.25s ease, background 0.25s ease;
 }
 
 .btn.primary {
-    background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-    color: #070813;
-    box-shadow: 0 20px 35px rgba(125, 120, 255, 0.35);
+    background: linear-gradient(145deg, var(--accent-strong), #cdb1ff);
+    color: #060614;
+    box-shadow: 0 26px 55px rgba(124, 90, 255, 0.48);
 }
 
 .btn.primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 28px 45px rgba(125, 120, 255, 0.45);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 34px 62px rgba(124, 90, 255, 0.58);
+}
+
+.btn.primary:active {
+    transform: translateY(-1px);
+    box-shadow: 0 18px 45px rgba(124, 90, 255, 0.45);
 }
 
 .btn.plain {
@@ -580,10 +585,30 @@ main, header, footer {
     gap: 18px;
 }
 
-.pricing-grid article ul {
+.package-label {
+    align-self: flex-start;
+    background: rgba(127, 91, 255, 0.22);
+    border: 1px solid rgba(127, 91, 255, 0.45);
+    border-radius: 999px;
+    padding: 6px 16px;
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    color: var(--accent-strong);
+}
+
+.package-intro {
+    color: var(--text-muted);
+    margin-top: -8px;
+}
+
+.package-points {
     margin: 0;
     padding-left: 20px;
     color: var(--text-muted);
+    display: grid;
+    gap: 8px;
+    list-style: disc;
 }
 
 .price {

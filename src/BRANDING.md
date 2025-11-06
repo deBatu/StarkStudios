@@ -1,4 +1,4 @@
-﻿# StarkStart Studio Brand Guide
+﻿# Start Studio Brand Guide
 
 ## Signature Typefaces
 - Unbounded (500/600/700) - ausschliesslich fuer Logo, Headlines und Key Statements.
