@@ -683,6 +683,33 @@ main, header, footer {
     box-shadow: 0 0 0 3px rgba(127, 91, 255, 0.2);
 }
 
+.contact-form .consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.contact-form .consent input {
+    margin-top: 5px;
+}
+
+.contact-form .consent a {
+    color: var(--accent-strong);
+}
+
+.form-feedback {
+    display: none;
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--accent-strong);
+}
+
+.form-feedback.visible {
+    display: block;
+}
+
 .site-footer {
     border-top: 1px solid rgba(255, 255, 255, 0.07);
     background: rgba(9, 11, 25, 0.92);

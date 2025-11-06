@@ -306,20 +306,29 @@
                         <span>Standort: Zuerich, Remote-first</span>
                     </div>
                 </div>
-                <form class="contact-form">
+                <form class="contact-form" id="contact-form">
                     <label>
-                        Projektname
-                        <input type="text" name="project" placeholder="Neue Unternehmenswebseite...">
+                        Ihr Name
+                        <input type="text" name="name" placeholder="Max Mustermann" required>
+                    </label>
+                    <label>
+                        Unternehmen
+                        <input type="text" name="company" placeholder="Firma oder Marke">
                     </label>
                     <label>
                         Email-Adresse
-                        <input type="email" name="email" placeholder="name@unternehmen.ch">
+                        <input type="email" name="email" placeholder="name@unternehmen.ch" required>
                     </label>
                     <label>
-                        Ziel des Projekts
-                        <textarea name="goal" rows="4" placeholder="Welche Funktionen und Integrationen sind wichtig?"></textarea>
+                        Projektinfo
+                        <textarea name="project" rows="4" placeholder="Beschreiben Sie kurz Ihr Projekt oder Ihr Ziel." required></textarea>
+                    </label>
+                    <label class="consent">
+                        <input type="checkbox" name="privacy" required>
+                        Ich stimme zu, dass Stark Studio meine Angaben verwendet, um Kontakt aufzunehmen. Weitere Informationen in der <a href="#">Datenschutzerklaerung</a>.
                     </label>
                     <button type="submit" class="btn primary">Nachricht senden</button>
+                    <p class="form-feedback" id="form-feedback">Danke! Wir melden uns innerhalb von 24 Stunden.</p>
                 </form>
             </div>
         </section>
@@ -383,6 +392,17 @@
         } else {
             applyTheme('');
         }
+    })();
+    (function() {
+        var form = document.getElementById('contact-form');
+        var feedback = document.getElementById('form-feedback');
+        if (!form || !feedback) return;
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            feedback.classList.add('visible');
+            form.reset();
+        });
     })();
     </script>
 </body>
