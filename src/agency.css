@@ -583,14 +583,20 @@ main, header, footer {
     display: flex;
     flex-direction: column;
     gap: 18px;
+    position: relative;
 }
 
 .package-label {
-    align-self: flex-start;
-    background: rgba(127, 91, 255, 0.22);
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(127, 91, 255, 0.18);
     border: 1px solid rgba(127, 91, 255, 0.45);
     border-radius: 999px;
-    padding: 6px 16px;
+    padding: 6px 18px 6px 12px;
     text-transform: uppercase;
     font-size: 0.72rem;
     letter-spacing: 0.18em;
